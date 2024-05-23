@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  nessus:
+    image: tenable/nessus:latest-ubuntu
+    restart: always
+    container_name: nessus
+    volumes:
+      - nessus-data:/opt/nessus/etc/nessus
+    environment:
+      USERNAME: '${USERNAME}'
+      PASSWORD: '${PASSWORD}'
+      ACTIVATION_CODE: '${ACTIVATION_CODE}'
+    ports:
+      - 8834:8834
+networks:
+  default:
+    name: nessus-net
+volumes:
+  nessus-data:
