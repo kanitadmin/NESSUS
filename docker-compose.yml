@@ -7,6 +7,7 @@ services:
     volumes:
       - nessus-data:/opt/nessus/etc/nessus
     environment:
+      TZ: "Asia/Bangkok" 
       USERNAME: '${USERNAME}'
       PASSWORD: '${PASSWORD}'
       ACTIVATION_CODE: '${ACTIVATION_CODE}'
