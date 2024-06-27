@@ -13,11 +13,11 @@ services:
       ACTIVATION_CODE: '${ACTIVATION_CODE}'
     ports:
       - 8834:8834
-    logging:
-      driver: syslog
-      options:
-        syslog-address: "tcp://127.0.0.1:514"
-        tag: "nessus-va"
+    #logging:
+    #  driver: syslog
+    #  options:
+    #    syslog-address: "tcp://127.0.0.1:514"
+    #    tag: "nessus-va"
 networks:
   default:
     name: nessus-net
