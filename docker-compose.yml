@@ -5,7 +5,7 @@ services:
     restart: always
     container_name: nessus
     volumes:
-      - nessus-data:/opt/nessus/etc/nessus
+      - nessus-data:/opt/nessus
     environment:
       TZ: "Asia/Bangkok" 
       USERNAME: '${USERNAME}'
